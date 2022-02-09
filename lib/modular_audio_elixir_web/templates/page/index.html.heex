@@ -1,0 +1,5 @@
+<div class="rack">
+  <%= for {pid, _, _} <- @mods do %>
+    <%= GenServer.call(pid, :render) %>
+  <% end %>
+</div>
